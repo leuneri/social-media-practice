@@ -9,7 +9,7 @@ import {
   persistStore,
   persistReducer,
   FLUSH,
-  REHYDTATE,
+  REHYDRATE,
   PAUSE,
   PURGE,
   REGISTER
@@ -26,7 +26,7 @@ const store = configureStore({
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({
       serializableCheck: {
-        ignoreActions: [  FLUSH, REHYDTATE, PAUSE, PURGE, REGISTER ]
+        ignoreActions: [  FLUSH, REHYDRATE, PAUSE, PURGE, REGISTER ]
       }
     })
 // code sets up Redux state persistence using redux-persist, creates a new reducer that handles persistence, and configures a Redux store with the persisted reducer and customized middleware
